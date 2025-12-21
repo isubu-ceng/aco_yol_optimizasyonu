@@ -1,0 +1,46 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+!README.md
+
+# Test ve geliştirme dosyaları
+tests/
+.pytest_cache/
+
+# Oluşturulan dosyalar (runtime'da oluşacak)
+figure/*.png
+figure/*.jpg
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Env dosyaları (secrets docker-compose'da tanımlanacak)
+.env
+.env.example

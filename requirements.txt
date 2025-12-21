@@ -1,0 +1,18 @@
+# Streamlit ana uygulama framework'ü
+streamlit==1.29.0
+
+# Google Maps API için
+googlemaps==4.10.0
+
+# Veri işleme ve matematiksel hesaplamalar
+numpy==1.26.2
+pandas==2.1.4
+
+# Görselleştirme
+matplotlib==3.8.2
+plotly==5.18.0
+folium==0.15.1
+streamlit-folium==0.15.1
+
+# Ortam değişkenleri yönetimi
+python-dotenv==1.0.0

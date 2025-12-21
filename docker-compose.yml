@@ -1,0 +1,35 @@
+services:
+  aco-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aco_yol_optimizasyonu
+    ports:
+      - "8501:8501"
+    volumes:
+      # Kodları mount et (geliştirme için)
+      - .:/app
+      # Figure klasörü için volume
+      - ./figure:/app/figure
+    environment:
+      # Google Maps API Key'i buraya ekleyin
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+    secrets:
+      - google_maps_api_key
+    restart: unless-stopped
+    networks:
+      - aco-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+secrets:
+  google_maps_api_key:
+    file: ./.streamlit/secrets.toml
+
+networks:
+  aco-network:
+    driver: bridge
