@@ -214,3 +214,5 @@ __marimo__/
 /figure
 
 .DS_Store
+
+.env.docker
